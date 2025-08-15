@@ -1,0 +1,23 @@
+{
+  "name": "tcc-sbap-ods6",
+  "version": "1.0.0",
+  "description": "TCC ODS SANEAMENTO BASICO E AGUA POTAVEL",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JS",
+    "Node",
+    "express",
+    "ejs",
+    "express-validator"
+  ],
+  "author": "GRUPO 5 TCC",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1"
+  }
+}

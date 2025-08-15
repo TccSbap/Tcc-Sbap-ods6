@@ -1,0 +1,16 @@
+.nav{
+    padding-right:100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #4ca0e5;
+        color: white;
+        padding-left: 10px 20px;
+      }
+      

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ODS6 - Saneamento Básico e Água Potável</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <%- include('../partials/header.ejs') %>
+  <main>
+    <section id="noticias">
+      <h1>Principais Notícias</h1>
+      <div class="noticias-grid">
+        <article>
+            <img class="noticia1" src="/images/Home noticia 1 - Senado.jpeg" alt="">
+          <h2>Senado aprova saneamento básico como direito constitucional</h2>
+        </article>
+        <article>
+          <img src="/images/Home noticia 2 - Cidade.jpeg "> 
+          <h2>Cidade-sede da COP30 é hoje a 8ª pior em Saneamento Básico</h2>
+        </article>
+        <article>
+          <img src="/images/Home noticia 3 - Saneamento.jpeg" alt="Imagem da notícia 3">
+          <h2>Falta de saneamento básico causa mais de 340 mil internações</h2>
+        </article>
+        <article>
+          <img src="/images/Home noticia 4 - mongaguá.jpeg" alt="Imagem da notícia 4">
+          <h2>Moradores de Mongaguá reclamam de esgoto a céu aberto</h2>
+        </article>
+      </div>
+    </section>
+
+    <section class="ImgOng" id="ongs">
+      <h1>ONG's</h1>
+      <div class="ongs-grid">
+        <article>
+          <img src="/images/Ong - Caminho das Aguas.jpeg" alt="Logo ONG Caminho das Águas">
+          <h2>ONG Caminho das Águas</h2>
+          <a href="/ongs" class="btn"><button>Participar</button></a>
+          <button>Doar</button>
+        </article>
+        <article>
+          <img src="/images/Ong- Agua Sustentavel.jpeg" alt="Logo ONG Água Sustentável">
+          <h2>ONG Água Sustentável</h2>
+          <a href="/ongs" class="btn"><button>Participar</button></a>
+          <button>Doar</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="barracoes">
+      <h1>Barracões</h1>
+      <p>Os Barracões são nossas Barracas de Campanha, uma forma prática de ajudar com a causa. </p>
+      
+      <p>Veja como você pode ajudar a criar um Barracão em sua região!</p>
+      
+      <a href="/barracoes">
+      <img class="Barracoes" src="/images/pag barracao 1 - barracoes.jpeg" alt="Imagem dos Barracões"> </a>
+    </section>
+  </main>
+  <%- include('../partials/footer.ejs') %>
+
+</body>
+</html>
