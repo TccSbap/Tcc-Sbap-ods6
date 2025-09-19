@@ -9,8 +9,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #4ca0e5;
+        background-color: #008cff;
         color: white;
         padding-left: 10px 20px;
+        border-bottom-left-radius: 20px ;
+        border-bottom-right-radius: 20px ;
       }
       

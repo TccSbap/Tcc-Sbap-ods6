@@ -8,13 +8,14 @@ body {
   header .logo img {
     height: 100px;
     width: 100px;
+    padding: 20px;
   }
   
   nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-  }
+  } 
   
   nav ul li a {
     color: white;
