@@ -103,8 +103,10 @@ body {
     background-color: #003366;
     color: white;
   }
-  li.barraP{
+  
+  .barra_p{
     padding-left: 50px;
+    border-radius: 100px;
   }
   img.logo2 {
     height: 75px;
