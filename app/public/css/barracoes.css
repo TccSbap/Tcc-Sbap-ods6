@@ -88,6 +88,9 @@ body {
     background-color: #003366;
     color: white;
   }
-  header.BM{
-    background-color: #00509E;
+
+    input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
