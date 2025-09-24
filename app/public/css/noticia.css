@@ -4,9 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
   }
-  
 
-  
   nav ul {
     list-style: none;
     display: flex;
@@ -24,11 +22,6 @@ body {
     border: none;
     color: white;
     cursor: pointer;
-  }
-  
-  .user-profile {
-    height: 75px;
-    width: 75px;
   }
   
   main {
@@ -85,3 +78,9 @@ body {
     height: 75px;
     width: 75px;
   }
+
+.PerfilLogo{
+  height: 75px;
+  width: 75px;
+  padding-right: 40px;
+}

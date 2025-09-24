@@ -29,11 +29,6 @@ body {
     height: 50px;
   }
   
-  .user-profile img {
-    height: 40px;
-    border-radius: 50%;
-  }
-  
   nav {
     text-align: center;
     margin-top: 10px;

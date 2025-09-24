@@ -22,11 +22,6 @@ body {
     text-decoration: none;
   }
   
-  .user-profile img {
-    height: 40px;
-    border-radius: 50%;
-  }
-  
   main {
     padding: 20px;
   }
