@@ -35,7 +35,7 @@ main {
     display: block;
     width: 100px;
     height: 4px;
-    background: linear-gradient(45deg, #9bdfee, #65fff5, #80e8ff);
+    background: linear-gradient(45deg, #00a2ff, #65c4fc, #8cd5ff);
     margin: 20px auto;
     border-radius: 2px;
 }
