@@ -5,23 +5,14 @@
   align-items: center;
 }
     
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #008cff;
-  color: white;
-  padding-left: 10px 20px;
-  border-bottom-left-radius: 20px ;
-  border-bottom-right-radius: 20px ;
-}
-
-.nav barra_p{
-  gap: 50px;
-}
-
-  input {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #008cff;
+        color: white;
+        padding-left: 10px 20px;
+        border-bottom-left-radius: 20px ;
+        border-bottom-right-radius: 20px ;
+      }
+      
