@@ -41,7 +41,7 @@ body {
     border-radius: 10px;
     max-width: 400px;
     margin: 0 auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   }
   
   h1 {
@@ -95,10 +95,7 @@ body {
     background-color: #00509E;
     color: white;
   }
-  
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #003366;
-    color: white;
+
+  .Login-h1{
+    color: #00509E;
   }

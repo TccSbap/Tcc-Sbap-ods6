@@ -1,0 +1,226 @@
+
+
+
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos para o cabeçalho principal */
+.Barra-T {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Estilos para o subtítulo */
+.h2-barra {
+    text-align: center;
+    color: #34495e;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Estilos para a seção de texto */
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+/* Estilos para os parágrafos */
+.p-barra,
+.p2-barra {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.p-barra b {
+    color: #2c3e50;
+}
+
+.p2-barra strong {
+    color: #e74c3c;
+}
+
+/* Estilos para a imagem e legenda */
+article#barracoes {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.img-barra {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .Barra-T {
+        font-size: 2em;
+    }
+
+    .h2-barra {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 15px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Barra-T {
+        font-size: 1.8em;
+    }
+
+    .h2-barra {
+        font-size: 1.3em;
+    }
+
+    .p-barra,
+    .p2-barra {
+        font-size: 0.9em;
+    }
+}
+
+
+
+
+/* Estilos adicionais para melhorar a experiência visual */
+
+/* Animação suave para elementos */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Hover effects para elementos interativos */
+section:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.img-barra:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para destacar texto importante */
+.p2-barra {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 20px;
+    border-left: 4px solid #3498db;
+    border-radius: 0 8px 8px 0;
+    margin-top: 20px;
+}
+
+/* Melhorias no layout principal */
+main {
+    min-height: 80vh;
+    padding: 20px 0;
+}
+
+/* Estilo para o container da imagem */
+figure {
+    margin: 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Gradiente sutil no fundo */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* Melhorias na tipografia */
+.Barra-T {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para links e texto destacado */
+strong {
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+/* Melhorias na responsividade para tablets */
+@media (max-width: 1024px) {
+    section {
+        margin: 0 20px;
+    }
+    
+    figure {
+        margin: 0 20px;
+    }
+}
+
+/* Estilos para impressão */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .img-barra {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+    
+    section {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* Acessibilidade - foco para navegação por teclado */
+*:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Estilo para seleção de texto */
+::selection {
+    background-color: #3498db;
+    color: white;
+}
+
+::-moz-selection {
+    background-color: #3498db;
+    color: white;
+}
