@@ -1,15 +1,15 @@
 .nav{
-    padding-right:100px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+  padding-right:100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
     
       header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: red;
+        background-color: #008cff;
         color: white;
         padding-left: 10px 20px;
         border-bottom-left-radius: 20px ;

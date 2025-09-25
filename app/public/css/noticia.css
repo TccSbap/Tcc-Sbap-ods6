@@ -1,114 +1,322 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  header {
-    background-color: #003366;
-    color: white;
-    padding: 10px 20px;
-  }
-  
-  header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 100px;
-  }
-  
-  header .logo img {
-    height: 100px;
-    width: 100px;
-    padding-right: 150px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  
-  nav ul li {
-    display: inline;
-  }
-  
-  .menu-button {
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Container principal */
+main {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seção de notícias */
+#noticias {
+    text-align: center;
+}
+
+/* Título principal */
+#noticias h1 {
+    font-size: 3.2em;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+#noticias h1::before {
+    display: block;
+    font-size: 0.6em;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+#noticias h1::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 5px;
+    background: linear-gradient(45deg,  #00a2ff, #65c4fc, #8cd5ff);
+    margin: 20px auto;
+    border-radius: 3px;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; transform: scaleX(1.1); }
+}
+
+/* Container da lista de notícias */
+.noticias-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 30px 0;
+}
+
+/* Cards das notícias */
+.noticias-list article {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
     cursor: pointer;
-  }
-  
-  input[type="search"] {
-    padding-right: 50px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    
-  }
-  
-  .user-profile {
-    height: 75px;
-    width: 75px;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  section#noticias {
-    background-color: #E6F2FF;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #003366;
-  }
-  
-  .noticias-list {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-  }
-  
-  article {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    flex: 1;
-  }
-  
-  article img {
+}
+
+/* Borda superior animada */
+.noticias-list article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(45deg,  #00a2ff, #65c4fc, #8cd5ff);
+    background-size: 400% 400%;
+    animation: gradientFlow 3s ease infinite;
+    z-index: 1;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Efeito hover nos cards */
+.noticias-list article:hover {
+    transform: translateY(-15px) scale(1.03);
+}
+
+/* Imagens das notícias */
+.noticias-list img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  article h2 {
-    font-size: 16px;
-    color: #003366;
-    margin: 10px 0;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #053666;
-    color: white;
-  }
-  
-  .barra_p{
-    padding-left: 50px;
-    border-radius: 100px;
-  }
-  img.logo2 {
-    height: 75px;
-    width: 75px;
-  }
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.noticias-list article:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* Overlay sutil na imagem */
+.noticias-list article::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
+    right: 0;
+    height: 250px;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.noticias-list article:hover::after {
+    opacity: 0;
+}
+
+/* Títulos das notícias */
+.noticias-list h2 {
+    padding: 25px;
+    font-size: 1.3em;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.noticias-list article:hover h2 {
+    color: #000000;
+}
+
+/* Indicador de leitura */
+.noticias-list article::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(45deg, #00a2ff, #65c4fc, #8cd5ff);
+    transition: width 0.3s ease;
+    z-index: 2;
+}
+
+.noticias-list article:hover::before {
+    width: 100%;
+}
+
+
+@keyframes bounce {
+    0%, 100% { 
+        opacity: 0.4; 
+        transform: translateY(0px) scale(1); 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: translateY(-20px) scale(1.2); 
+    }
+}
+
+/* Animações de entrada */
+.noticias-list article {
+    animation: slideInUp 0.8s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.noticias-list article:nth-child(1) { animation-delay: 0.2s; }
+.noticias-list article:nth-child(2) { animation-delay: 0.4s; }
+.noticias-list article:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    main {
+        padding: 30px 15px;
+    }
+    
+    #noticias h1 {
+        font-size: 2.5em;
+    }
+    
+    .noticias-list {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .noticias-list img {
+        height: 200px;
+    }
+    
+    .noticias-list h2 {
+        padding: 20px;
+        font-size: 1.2em;
+    }
+    
+    .noticias-list article::after {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    #noticias h1 {
+        font-size: 2em;
+    }
+    
+    .noticias-list {
+        gap: 20px;
+        padding: 20px 0;
+    }
+    
+    .noticias-list img {
+        height: 180px;
+    }
+    
+    .noticias-list h2 {
+        padding: 15px;
+        font-size: 1.1em;
+    }
+    
+    .noticias-list article::after {
+        height: 180px;
+    }
+    
+    .dot {
+        font-size: 2em;
+        margin: 10px 0;
+    }
+}
+
+/* ===== ACESSIBILIDADE ===== */
+.noticias-list article:focus {
+    outline: 4px solid #65c4fc;
+    outline-offset: 4px;
+}
+
+/* Seleção de texto personalizada */
+::selection {
+    background-color: #00a2ff;
+    color: rgb(255, 0, 0);
+
+}
+
+::-moz-selection {
+    background-color: #8cd5ff;
+    color: rgb(0, 0, 0);
+}
+
+/* ===== ESTILOS PARA IMPRESSÃO ===== */
+@media print {  
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .noticias-list article {
+        box-shadow: none;
+        border: 2px solid #ffffff;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    #noticias h1::before {
+        display: none;
+    }
+}
+
+/* Efeito de partículas no fundo */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 100px 100px, 150px 150px, 200px 200px;
+    pointer-events: none;
+    z-index: -1;
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Efeito de brilho no título */
+#noticias h1 {
+    background: #00509E;
+    background-size: 200% 200%;
+    background-clip: text;
+    animation: textShine 3s ease-in-out infinite;
+}
+
+@keyframes textShine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}

@@ -22,24 +22,12 @@ body {
     text-decoration: none;
   }
   
-  .user-profile img {
-    height: 40px;
-    border-radius: 50%;
-  }
-  
   main {
     padding: 20px;
   }
   
   section {
     margin-bottom: 40px;
-  }
-  
-  #noticias .noticias-grid,
-  #ongs .ongs-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
   }
   
   article img {
@@ -55,13 +43,6 @@ body {
     color: #003366;
     text-decoration: none;
   }
-  
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #003366;
-    color: white;
-  }
 
   img.Barracoes {
     height: 350px;
@@ -70,6 +51,8 @@ body {
   img.PerfilLogo{
     height: 75px;
     width: 75px;
+    padding-right: 20px;
+    
   }
   .btnBarracao {
     color: white;
@@ -90,3 +73,383 @@ body {
     width: 100%;
     height: 200px;
   }
+
+  input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Container principal */
+main {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Estilos gerais para títulos de seção */
+section h1 {
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #00509E;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+section h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #00a2ff, #65c4fc);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* ===== SEÇÃO DE NOTÍCIAS ===== */
+#noticias {
+    margin-bottom: 80px;
+}
+
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.noticias-grid article {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.noticias-grid article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(45deg ,#00a2ff, #65c4fc, #8cd5ff);
+    background-size: 200% 200%;
+    animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.noticias-grid article:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.noticias-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.noticias-grid article:hover img {
+    transform: scale(1.05);
+}
+
+.noticias-grid h2 {
+    padding: 20px;
+    font-size: 1.2em;
+    color: #2d3436;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* ===== SEÇÃO DE ONGs ===== */
+.ImgOng {
+    margin-bottom: 80px;
+}
+
+.ongs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.ongs-grid article {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ongs-grid article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(45deg, #00a2ff, #65c4fc, #8cd5ff );
+    background-size: 200% 200%;
+    animation: gradientMove 4s ease infinite;
+}
+
+.ongs-grid article:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.ongs-grid img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.ongs-grid article:hover img {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.ongs-grid h2 {
+    color: #2d3436;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+/* Estilos para botões */
+.ongs-grid button {
+    background: linear-gradient(45deg, #00a2ff, #65c4fc, #8cd5ff);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ongs-grid button:hover {
+    background: linear-gradient(45deg, #00a2ff, #65c4fc, #8cd5ff);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 184, 148, 0.4);
+}
+
+.ongs-grid .btn {
+    text-decoration: none;
+}
+
+/* ===== SEÇÃO DE BARRACÕES ===== */
+#barracoes {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#barracoes h1 {
+    margin-bottom: 30px;
+}
+
+#barracoes p {
+    color: #00509E;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Barracoes {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.Barracoes:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Pontos decorativos */
+main > p {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 3em;
+    text-align: center;
+    margin: 10px 0;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+main > p:nth-of-type(odd) {
+    animation-delay: 0.5s;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.2); }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    main {
+        padding: 20px 15px;
+    }
+    
+    section h1 {
+        font-size: 2.2em;
+    }
+    
+    .noticias-grid,
+    .ongs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .ongs-grid article {
+        padding: 20px;
+    }
+    
+    .ongs-grid img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    #barracoes {
+        padding: 20px;
+    }
+    
+    .Barracoes {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    section h1 {
+        font-size: 1.8em;
+    }
+    
+    .noticias-grid h2 {
+        font-size: 1.1em;
+        padding: 15px;
+    }
+    
+    .ongs-grid h2 {
+        font-size: 1.2em;
+    }
+    
+    .ongs-grid button {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+    
+    #barracoes p {
+        font-size: 1em;
+    }
+}
+
+/* ===== ANIMAÇÕES DE ENTRADA ===== */
+.noticias-grid article {
+    animation: slideInUp 0.6s ease-out;
+}
+
+.noticias-grid article:nth-child(1) { animation-delay: 0.1s; }
+.noticias-grid article:nth-child(2) { animation-delay: 0.2s; }
+.noticias-grid article:nth-child(3) { animation-delay: 0.3s; }
+.noticias-grid article:nth-child(4) { animation-delay: 0.4s; }
+
+.ongs-grid article {
+    animation: slideInUp 0.6s ease-out;
+}
+
+.ongs-grid article:nth-child(1) { animation-delay: 0.2s; }
+.ongs-grid article:nth-child(2) { animation-delay: 0.4s; }
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ACESSIBILIDADE ===== */
+*:focus {
+    outline: 3px solid #fdcb6e;
+    outline-offset: 2px;
+}
+
+
+
+::selection {
+    background-color: #fd79a8;
+    color: white;
+}
+
+::-moz-selection {
+    background-color: #fd79a8;
+    color: white;
+}
+
+/* ===== ESTILOS PARA IMPRESSÃO ===== */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .noticias-grid article,
+    .ongs-grid article {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        break-inside: avoid;
+    }
+    
+    main > p {
+        display: none;
+    }
+}
