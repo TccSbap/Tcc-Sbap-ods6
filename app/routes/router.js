@@ -29,4 +29,8 @@ router.get('/denuncias', (req, res) => {
     res.render('pages/denuncias');
       });
 
+router.get('/feed', (req, res) => {
+    res.render('pages/feed');
+      } );
+
 module.exports = router;
