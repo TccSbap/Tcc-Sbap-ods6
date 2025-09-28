@@ -2,28 +2,31 @@ var express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('pages/index');
+    res.render('pages/index');
 });
 
 router.get("/Info-Ongs", (req, res) => {
     res.render('pages/Info-Ongs');
   });
 
-  router.get("/Login", (req, res) => {
+router.get("/Login", (req, res) => {
     res.render('pages/Login');
   });
 
-  router.get("/Ongs", (req, res) => {
+router.get("/Ongs", (req, res) => {
     res.render('pages/Ongs');
   });
 
-    router.get('/barracoes', (req, res) => {
+router.get('/barracoes', (req, res) => {
     res.render('pages/barracoes');
     });
 
-    router.get('/noticia', (req, res) => {
-      res.render('pages/noticia');
+router.get('/noticia', (req, res) => {
+    res.render('pages/noticia');
       });
     
+router.get('/denuncias', (req, res) => {
+    res.render('pages/denuncias');
+      });
 
 module.exports = router;

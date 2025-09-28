@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ODS6 - Saneamento Básico e Água Potável</title>
+  <link rel="stylesheet" href="css/denuncias.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+    <body>
+  <%- include('../partials/header.ejs') %>
+    <main>
+        <section id="denuncias">
+        <h1>Denúncias</h1>
+        <p>Se você presenciou ou tem conhecimento de alguma situação relacionada à falta de saneamento básico, água potável ou qualquer outra questão ambiental, não hesite em fazer uma denúncia. Sua ação pode ajudar a melhorar a qualidade de vida de muitas pessoas e proteger o meio ambiente.</p>
+        <form action="/submit-denuncia" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo (opcional)">
+            
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Seu email (opcional)">
+            
+    
+            <label for="descricao">Descrição da Denúncia:</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea placeholder="Descreva a situação que você está denunciando"></textarea>
+    
+            <label for="localizacao">Localização:</label>
+            <input type="text" id="localizacao" name="localizacao" required placeholder="Onde a situação ocorreu (obrigatório)">
+    
+            <button type="submit">Enviar Denúncia</button>
+        </form>
+        </section>
+
+    </main>
+    <%- include('../partials/footer.ejs') %>
+    </body>
+</html>
