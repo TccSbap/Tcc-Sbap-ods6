@@ -16,20 +16,24 @@
     <section id="login">
       <h1 class="Login-h1">Login</h1>
       <form>
-        <div class="form-group">
+        <nav class="form-group">
           <label for="username">Nome de Usuário</label>
           <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário">
-        </div>
-        <div class="form-group">
+        </nav>
+        <nav class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Digite seu email">
-        </div>
-        <div class="form-group">
+        </nav>
+        <nav class="form-group">
           <label for="password">Senha</label>
           <input type="password" id="password" name="password" placeholder="Digite sua senha">
-        </div>
+        </nav>
+        <nav class="form-group">  
+          <label for="password">Confirmar senha</label>
+          <input type="password" id="password" name="password" placeholder="Digite sua senha">
+        </nav>
         <button type="submit" class="btn-primary">Cadastrar</button>
-        <button type="button" class="btn-secondary">Entrar sem conta</button>
+        <button type="button" class="btn-secondary"><a href="Login.ejs">Login</a></button>
       </form>
     </section>
   </main>
