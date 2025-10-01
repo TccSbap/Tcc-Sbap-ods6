@@ -15,18 +15,22 @@ router.get("/Ongs", (req, res) => {
 
 router.get('/barracoes', (req, res) => {
     res.render('pages/barracoes');
-    });
+  });
 
 router.get('/noticia', (req, res) => {
     res.render('pages/noticia');
-      });
+  });
     
 router.get('/denuncias', (req, res) => {
     res.render('pages/denuncias');
-      });
+  });
 
 router.get('/feed', (req, res) => {
     res.render('pages/feed');
-      } );
+  });
+    
+ router.get('/cadastro', (req, res) => {
+     res.render('pages/cadastro');
+  });
 
 module.exports = router;
