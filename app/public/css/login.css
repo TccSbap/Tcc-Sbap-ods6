@@ -94,8 +94,15 @@ body {
   .btn-secondary {
     background-color: #00509E;
     color: white;
+
   }
 
   .Login-h1{
     color: #00509E;
   }
+
+   a , .btn-secondary{
+    color: white;
+    
+   }
+  
